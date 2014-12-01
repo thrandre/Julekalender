@@ -1,16 +1,5 @@
 var isPalindrome = function(digitStr) {
-  var len = digitStr.length,
-    chunkLen = Math.floor(length / 2),
-    firstChunk,
-    secondChunk;
-
-  if (len === 1)
-    return true;
-
-  firstChunk = digitStr.substr(0, chunkLen);
-  secondChunk = digitStr.substr(chunkLen + (length % 2), chunkLen).split('').reverse().join('');
-
-  return firstChunk === secondChunk;
+  return digitStr === digitStr.split('').reverse().join('');
 };
 
 var toBase8Str = function(number) {
