@@ -36,7 +36,7 @@ var perms = [];
 
 console.time();
 
-permute([1, 2, 3, 4, 5, 6, 7, 8, 9], 0, Array(2), Array(2), perms);
+permute([1, 2, 3, 4, 5, 6, 7, 8, 9], 0, Array(9), Array(9), perms);
 
 var smallestOfThelargeFactors = _.min(perms.map(function(p) {
   return _.max(primeFactorization(parseInt(p.join(''))));
